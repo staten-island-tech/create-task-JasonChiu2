@@ -19,11 +19,18 @@ function shuffleCards(deck) {
 shuffleCards(deck);
 
 function drawCard(deck) {
-  for (let i = 0; i < 5; i++) {
-    let drawnCards = deck.splice(0, 1);
-    let hand = drawnCards.join(" ");
-    console.log(hand);
-  }
+  let cardAmount = DOMSelectors.amount.value;
+  let drawnCards = deck.splice(0, cardAmount);
+  console.log(drawnCards);
 }
 
-drawCard(deck);
+function clear() {
+  DOMSelectors.amount.value = "";
+}
+
+DOMSelectors.form.addEventListener("submit", function () {
+  event.preventDefault();
+  drawCard(deck);
+  drawCard(deck);
+  clear();
+});
