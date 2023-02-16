@@ -7,7 +7,7 @@ document.querySelector("#app").innerHTML = `
     </div>
 `;
 
-function shuffleCards(deck) {
+function shuffleCards() {
   for (let i = 0; i < 52; i++) {
     let tempCard = deck[i];
     let randomSpot = Math.floor(Math.random() * 52);
@@ -18,7 +18,7 @@ function shuffleCards(deck) {
 
 shuffleCards(deck);
 
-function drawCard(deck) {
+function drawCard() {
   let cardAmount = DOMSelectors.amount.value;
   let drawnCards = deck.splice(0, cardAmount);
   console.log(drawnCards);
