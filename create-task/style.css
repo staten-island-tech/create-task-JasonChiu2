@@ -37,16 +37,35 @@ h5 {
 
 .header {
   text-align: center;
+  display: flex;
+  align-items: center;
   border: solid 0.2rem;
   border-radius: 1rem;
-  margin: 1rem;
+  margin: 1rem auto;
+  width: 25rem;
+  height: 35rem;
+}
+
+.title-heart1 {
+  float: left;
+  width: 10%;
+  height: 10%;
+  position: relative;
+  bottom: 15rem;
+}
+
+.title-heart2 {
+  float: right;
+  width: 10%;
+  height: 10%;
+  position: relative;
+  top: 15rem;
+  right: 0.5rem;
 }
 
 #form {
   text-align: center;
   font-size: var(--h2);
-  border: solid 0.2rem;
-  border-radius: 1rem;
   margin: 1rem auto;
   width: 50%;
 }
