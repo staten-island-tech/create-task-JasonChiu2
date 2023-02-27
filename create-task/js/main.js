@@ -28,9 +28,20 @@ function clear() {
   DOMSelectors.amount.value = "";
 }
 
+function start() {
+  if (DOMSelectors.amount.value < 1 || DOMSelectors.amount.value > 26 || "") {
+    DOMSelectors.container.insertAdjacentHTML(
+      "beforeend",
+      `<h2>Please input a number between 1 and 26!</h2>`
+    );
+  } else {
+    drawCard(deck);
+    drawCard(deck);
+  }
+}
+
 DOMSelectors.form.addEventListener("submit", function () {
   event.preventDefault();
-  drawCard(deck);
-  drawCard(deck);
+  start();
   clear();
 });
