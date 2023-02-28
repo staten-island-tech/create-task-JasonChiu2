@@ -49,17 +49,17 @@ h5 {
 .title-heart1 {
   float: left;
   width: 10%;
-  height: 10%;
+  height: auto;
   position: relative;
-  bottom: 15rem;
+  bottom: 16rem;
 }
 
 .title-heart2 {
   float: right;
   width: 10%;
-  height: 10%;
+  height: auto;
   position: relative;
-  top: 15rem;
+  top: 16rem;
   right: 0.5rem;
 }
 
@@ -77,4 +77,8 @@ h5 {
 
 #submit {
   margin: 0.75rem 0.75rem 0.75rem 0rem;
+}
+
+#app {
+  text-align: center;
 }
