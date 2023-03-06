@@ -12,14 +12,20 @@
   <body>
     <div class="header">
       <img src="heart.png" alt="heart" class="title-heart1">
-      <h1>Who has the stronger set of cards?</h1>
+      <h1>Who has the stronger card?</h1>
       <img src="heart.png" alt="heart" class="title-heart2">
     </div>
     <form id="form">
-      <input type="number" id="card-amount" />
       <button id="submit">Play</button>
     </form>
-    <div id="app"></div>
+    <div id="tracker"></div>
+    <div id="result">
+      <h2 class="result"></h2>
+    </div>
+    <div class="cardHolder">
+      <div id="player"></div>
+      <div id="computer"></div>
+    </div>
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>

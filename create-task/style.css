@@ -44,6 +44,7 @@ h5 {
   margin: 1rem auto;
   width: 25rem;
   height: 35rem;
+  user-select: none;
 }
 
 .title-heart1 {
@@ -70,15 +71,55 @@ h5 {
   width: 50%;
 }
 
-#card-amount {
-  margin: 1.25rem;
-  width: 75%;
-}
-
 #submit {
-  margin: 0.75rem 0.75rem 0.75rem 0rem;
+  user-select: none;
+  cursor: pointer;
 }
 
 #app {
   text-align: center;
+}
+
+.result {
+  text-align: center;
+  margin: 1rem;
+}
+
+.card {
+  position: relative;
+  height: 35rem;
+  width: 25rem;
+  border: 1px solid black;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rem;
+  user-select: none;
+}
+
+.card::before,.card::after{
+  content: attr(data-value);
+  font-size: 5rem;
+}
+
+.cardHolder {
+  display: flex;
+  justify-content: center;
+}
+
+#player {
+  margin: 1rem;
+}
+
+#computer {
+  margin: 1rem;
+}
+
+.♥ {
+  color: red;
+}
+
+.♦ {
+  color: red;
 }

@@ -1,54 +1,46 @@
-export const deck = [
-  "2H",
-  "3H",
-  "4H",
-  "5H",
-  "6H",
-  "7H",
-  "8H",
-  "9H",
-  "TH",
-  "JH",
-  "QH",
-  "KH",
-  "AH",
-  "2C",
-  "3C",
-  "4C",
-  "5C",
-  "6C",
-  "7C",
-  "8C",
-  "9C",
-  "TC",
-  "JC",
-  "QC",
-  "KC",
-  "AC",
-  "2D",
-  "3D",
-  "4D",
-  "5D",
-  "6D",
-  "7D",
-  "8D",
-  "9D",
-  "TD",
-  "JD",
-  "QD",
-  "KD",
-  "AD",
-  "2S",
-  "3S",
-  "4S",
-  "5S",
-  "6S",
-  "7S",
-  "8S",
-  "9S",
-  "TS",
-  "JS",
-  "QS",
-  "KS",
-  "AS",
+const suits = ["♠", "♥", "♦", "♣"];
+const values = [
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "J",
+  "Q",
+  "K",
+  "A",
 ];
+
+export default class Deck {
+  constructor(cards = newDeck()) {
+    this.cards = cards;
+  }
+
+  shuffle() {
+    for (let i = this.cards.length - 1; i > 0; i--) {
+      const newIndex = Math.floor(Math.random() * (i + 1));
+      const oldValue = this.cards[newIndex];
+      this.cards[newIndex] = this.cards[i];
+      this.cards[i] = oldValue;
+    }
+  }
+}
+
+class Card {
+  constructor(suit, value) {
+    this.suit = suit;
+    this.value = value;
+  }
+}
+
+function newDeck() {
+  return suits.flatMap((suit) => {
+    return values.map((value) => {
+      return new Card(suit, value);
+    });
+  });
+}

@@ -1,6 +1,8 @@
 export const DOMSelectors = {
-  amount: document.getElementById("card-amount"),
   form: document.getElementById("form"),
   submit: document.getElementById("submit"),
-  container: document.getElementById("app"),
+  player: document.getElementById("player"),
+  computer: document.getElementById("computer"),
+  result: document.getElementById("result"),
+  tracker: document.getElementById("tracker"),
 };
