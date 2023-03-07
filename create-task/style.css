@@ -64,14 +64,14 @@ h5 {
   right: 0.5rem;
 }
 
-#form {
+#form, #shuffle {
   text-align: center;
   font-size: var(--h2);
   margin: 1rem auto;
   width: 50%;
 }
 
-#submit {
+#submit, #shuffleDeck {
   user-select: none;
   cursor: pointer;
 }
@@ -116,10 +116,6 @@ h5 {
   margin: 1rem;
 }
 
-.♥ {
-  color: red;
-}
-
-.♦ {
+.♥, .♦ {
   color: red;
 }

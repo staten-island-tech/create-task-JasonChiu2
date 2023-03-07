@@ -5,7 +5,7 @@ import { DOMSelectors } from "../js/DOMSelectors.js";
 const deck = new Deck();
 deck.shuffle();
 
-const CARD_VALUE_MAP = {
+const cardToNumber = {
   2: 2,
   3: 3,
   4: 4,
@@ -73,7 +73,7 @@ function declareWinner() {
 }
 
 function getWinner(card1, card2) {
-  return CARD_VALUE_MAP[card1.value] > CARD_VALUE_MAP[card2.value];
+  return cardToNumber[card1.value] > cardToNumber[card2.value];
 }
 
 function clear() {
@@ -97,4 +97,9 @@ DOMSelectors.form.addEventListener("submit", function () {
   drawCardComputer();
   declareWinner();
   track();
+});
+
+DOMSelectors.shuffle.addEventListener("submit", function () {
+  event.preventDefault();
+  deck.shuffle();
 });
